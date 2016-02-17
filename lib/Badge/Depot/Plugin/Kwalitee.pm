@@ -94,20 +94,58 @@ __PACKAGE__->meta->make_immutable;
 
 __END__
 
-1;
-
-__END__
-
 =pod
 
 =head1 SYNOPSIS
 
+If used standalone:
+
     use Badge::Depot::Plugin::Kwalitee;
+
+    my $badge = Badge::Depot::Plugin::Kwalitee->new(dist => 'The-Dist', version => '0.1002');
+
+    print $badge->to_html;
+    # prints:
+    <a href="http://cpants.cpanauthors.org/dist/The-Dist-0.1002">
+        <img src="https://badgedepot.code301.com/badge/kwalitee/The-Dist/0.1002" alt="Distribution kwalitee" />
+    </a>
+
+If used with L<Pod::Weaver::Section::Badges>, in weaver.ini:
+
+    [Badges]
+    ; other settings
+    badge = kwalitee
+
 
 =head1 DESCRIPTION
 
-Badge::Depot::Plugin::Kwalitee is ...
+Creates a L<Kwalitee|http://cpants.cpanauthors.org> badge for a distribution.
+
+This class consumes the L<Badge::Depot> role.
+
+=head1 ATTRIBUTES
+
+If there is a C<META.json> in the distribution root, then no attributes are necessary - this plugin uses the distribution name and version given in it.
+
+=for :list
+
+=head2 dist
+
+Distribution name. With dashes, not colons.
+
+=head2 version
+
+Distribution version.
+
+=head2 base_url
+
+Default: C<https://badgedepot.code301.com>
+
+Set this if you wish to use another instance of L<Badge::Depot::App>.
 
 =head1 SEE ALSO
+
+=for :list
+* L<Badge::Depot>
 
 =cut

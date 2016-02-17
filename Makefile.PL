@@ -16,7 +16,16 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "MIN_PERL_VERSION" => "5.010000",
   "NAME" => "Badge::Depot::Plugin::Kwalitee",
-  "PREREQ_PM" => {},
+  "PREREQ_PM" => {
+    "Badge::Depot" => "0.0103",
+    "JSON::MaybeXS" => 0,
+    "Moose" => "2.1400",
+    "MooseX::AttributeShortcuts" => 0,
+    "Path::Tiny" => 0,
+    "Types::Standard" => "1.000000",
+    "Types::URI" => 0,
+    "namespace::autoclean" => "0.18"
+  },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
@@ -32,11 +41,19 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Badge::Depot" => "0.0103",
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
-  "Test::More" => "0.96"
+  "JSON::MaybeXS" => 0,
+  "Moose" => "2.1400",
+  "MooseX::AttributeShortcuts" => 0,
+  "Path::Tiny" => 0,
+  "Test::More" => "0.96",
+  "Types::Standard" => "1.000000",
+  "Types::URI" => 0,
+  "namespace::autoclean" => "0.18"
 );
 
 

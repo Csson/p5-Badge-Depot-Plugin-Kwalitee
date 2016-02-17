@@ -1,6 +1,14 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-17 12:41:36 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-17 16:04:02 UTC.
 
 on runtime => sub {
+    requires 'Badge::Depot' => '0.0103';
+    requires 'JSON::MaybeXS' => '0';
+    requires 'Moose' => '2.1400';
+    requires 'MooseX::AttributeShortcuts' => '0';
+    requires 'Path::Tiny' => '0';
+    requires 'Types::Standard' => '1.000000';
+    requires 'Types::URI' => '0';
+    requires 'namespace::autoclean' => '0.18';
     requires 'perl' => '5.010000';
 };
 on test => sub {
@@ -70,7 +78,6 @@ on develop => sub {
     requires 'Pod::Weaver::Plugin::Transformer' => '0';
     requires 'Pod::Weaver::PluginBundle::CorePrep' => '0';
     requires 'Pod::Weaver::Section::Authors' => '0';
-    requires 'Pod::Weaver::Section::Badges' => '0';
     requires 'Pod::Weaver::Section::Collect' => '0';
     requires 'Pod::Weaver::Section::Generic' => '0';
     requires 'Pod::Weaver::Section::Homepage::DefaultCPAN' => '0';
@@ -88,5 +95,5 @@ on develop => sub {
 };
 on develop => sub {
     suggests 'Dist::Iller' => '0.1406';
-    suggests 'Dist::Iller::Config::Author::CSSON' => '0.0306';
+    suggests 'Dist::Iller::Config::Author::CSSON' => '0.0307';
 };
