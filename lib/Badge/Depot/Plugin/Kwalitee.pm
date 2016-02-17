@@ -4,9 +4,9 @@ use warnings;
 
 package Badge::Depot::Plugin::Kwalitee;
 
-# ABSTRACT: Short intro
+# ABSTRACT: Kwalitee badge for Badge::Depot
 # AUTHORITY
-our $VERSION = '0.0101';
+our $VERSION = '0.0100';
 
 use Moose;
 use namespace::autoclean;
@@ -147,5 +147,6 @@ Set this if you wish to use another instance of L<Badge::Depot::App>.
 
 =for :list
 * L<Badge::Depot>
+* L<Task::Badge::Depot>
 
 =cut

@@ -1,6 +1,6 @@
 # NAME
 
-Badge::Depot::Plugin::Kwalitee - Short intro
+Badge::Depot::Plugin::Kwalitee - Kwalitee badge for Badge::Depot
 
 # VERSION
 
@@ -53,6 +53,7 @@ Set this if you wish to use another instance of [Badge::Depot::App](https://meta
 # SEE ALSO
 
 - [Badge::Depot](https://metacpan.org/pod/Badge::Depot)
+- [Task::Badge::Depot](https://metacpan.org/pod/Task::Badge::Depot)
 
 # SOURCE
 
