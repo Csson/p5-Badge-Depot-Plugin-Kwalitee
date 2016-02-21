@@ -9,6 +9,7 @@ Revision history for Badge-Depot-Plugin-Kwalitee
   - Fix abstract.
 
  [Enhancements]
+  - Now uses the Dist::Zilla object (if it is used during a Dist::Zilla build) to set the 'dist' and 'version' attributes.
 
  [New Features]
 
