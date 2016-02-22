@@ -140,7 +140,7 @@
    "provides" : {
       "Badge::Depot::Plugin::Kwalitee" : {
          "file" : "lib/Badge/Depot/Plugin/Kwalitee.pm",
-         "version" : "0.0100"
+         "version" : "0.0101"
       }
    },
    "release_status" : "stable",
@@ -155,7 +155,7 @@
          "web" : "https://github.com/Csson/p5-Badge-Depot-Plugin-Kwalitee"
       }
    },
-   "version" : "0.0100",
+   "version" : "0.0101",
    "x_authority" : "cpan:CSSON"
 }
 

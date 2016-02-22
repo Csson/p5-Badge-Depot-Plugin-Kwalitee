@@ -6,14 +6,15 @@ Badge::Depot::Plugin::Kwalitee - Kwalitee badge for Badge::Depot
     <p>
     <img src="https://img.shields.io/badge/perl-5.10+-blue.svg" alt="Requires Perl 5.10+" />
     <a href="https://travis-ci.org/Csson/p5-Badge-Depot-Plugin-Kwalitee"><img src="https://api.travis-ci.org/Csson/p5-Badge-Depot-Plugin-Kwalitee.svg?branch=master" alt="Travis status" /></a>
-    <a href="http://cpants.cpanauthors.org/dist/Badge-Depot-Plugin-Kwalitee-0.0100"><img src="https://badgedepot.code301.com/badge/kwalitee/Badge-Depot-Plugin-Kwalitee/0.0100" alt="Distribution kwalitee" /></a>
-    <a href="http://matrix.cpantesters.org/?dist=Badge-Depot-Plugin-Kwalitee%200.0100"><img src="https://badgedepot.code301.com/badge/cpantesters/Badge-Depot-Plugin-Kwalitee/0.0100" alt="CPAN Testers result" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Badge-Depot-Plugin-Kwalitee-0.0101"><img src="https://badgedepot.code301.com/badge/kwalitee/Badge-Depot-Plugin-Kwalitee/0.0101" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Badge-Depot-Plugin-Kwalitee%200.0101"><img src="https://badgedepot.code301.com/badge/cpantesters/Badge-Depot-Plugin-Kwalitee/0.0101" alt="CPAN Testers result" /></a>
+    <img src="https://img.shields.io/badge/coverage-70.6%-red.svg" alt="coverage 70.6%" />
     </p>
 </div>
 
 # VERSION
 
-Version 0.0100, released 2016-02-22.
+Version 0.0101, released 2016-02-22.
 
 # SYNOPSIS
 
