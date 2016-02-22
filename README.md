@@ -13,7 +13,7 @@ Badge::Depot::Plugin::Kwalitee - Kwalitee badge for Badge::Depot
 
 # VERSION
 
-Version 0.0100, released 2016-02-21.
+Version 0.0100, released 2016-02-22.
 
 # SYNOPSIS
 
