@@ -2,9 +2,18 @@
 
 Badge::Depot::Plugin::Kwalitee - Kwalitee badge for Badge::Depot
 
+<div>
+    <p>
+    <img src="https://img.shields.io/badge/perl-5.10+-blue.svg" alt="Requires Perl 5.10+" />
+    <a href="https://travis-ci.org/Csson/p5-Badge-Depot-Plugin-Kwalitee"><img src="https://api.travis-ci.org/Csson/p5-Badge-Depot-Plugin-Kwalitee.svg?branch=master" alt="Travis status" /></a>
+    <a href="http://cpants.cpanauthors.org/dist/Badge-Depot-Plugin-Kwalitee-0.0100"><img src="https://badgedepot.code301.com/badge/kwalitee/Badge-Depot-Plugin-Kwalitee/0.0100" alt="Distribution kwalitee" /></a>
+    <a href="http://matrix.cpantesters.org/?dist=Badge-Depot-Plugin-Kwalitee%200.0100"><img src="https://badgedepot.code301.com/badge/cpantesters/Badge-Depot-Plugin-Kwalitee/0.0100" alt="CPAN Testers result" /></a>
+    </p>
+</div>
+
 # VERSION
 
-Version 0.0100, released 2016-02-17.
+Version 0.0100, released 2016-02-22.
 
 # SYNOPSIS
 
@@ -34,7 +43,12 @@ This class consumes the [Badge::Depot](https://metacpan.org/pod/Badge::Depot) ro
 
 # ATTRIBUTES
 
-If there is a `META.json` in the distribution root, then no attributes are necessary - this plugin uses the distribution name and version given in it.
+This badge tries to use distribution meta data to set the attributes. If that is available no attributes need to be set manually. The following checks are made:
+
+1. If the badge is used via [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::Weaver::Section::Badges) during a [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) build, then `version` and `dist` are set to the values in the Dist::Zilla object.
+2. If there is a `META.json` in the distribution root then that is used to set `version` and `dist`.
+
+If neither of those are true, then you should pass `dist` and `version` to the constructor.
 
 ## dist
 
