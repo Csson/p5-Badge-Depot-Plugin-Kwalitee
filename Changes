@@ -4,6 +4,7 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [API Changes]
 
  [Bug Fixes]
+ - Added required 'author' attribute to adapt to cpants changes.
 
  [Documentation]
 
@@ -12,6 +13,7 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [New Features]
 
  [Other Changes]
+ - Default url protocol (temporarily) changed from https to http.
 
  [Requirements]
 
