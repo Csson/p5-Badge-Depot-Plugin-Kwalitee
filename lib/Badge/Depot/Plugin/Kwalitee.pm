@@ -17,6 +17,12 @@ use JSON::MaybeXS 'decode_json';
 use Path::Tiny;
 with 'Badge::Depot';
 
+
+has author => (
+    is => 'ro',
+    isa => Str,
+    required => 1,
+);
 has dist => (
     is => 'ro',
     isa => Str,
@@ -44,7 +50,7 @@ has base_url => (
     isa => Uri,
     coerce => 1,
     lazy => 1,
-    default => 'https://badgedepot.code301.com',
+    default => 'http://badgedepot.code301.com',
 );
 has custom_image_url => (
     is => 'ro',
@@ -56,7 +62,7 @@ has custom_image_url => (
 
 sub _build_custom_image_url  {
     my $self = shift;
-    return sprintf '%s/badge/kwalitee/%s/%s', $self->base_url, $self->dist, $self->version;
+    return sprintf '%s/badge/kwalitee/%s/%s/%s', $self->base_url, $self->author, $self->dist, $self->version;
 }
 has _meta => (
     is => 'ro',
@@ -95,7 +101,7 @@ sub _build_meta {
 
 sub BUILD {
     my $self = shift;
-    $self->link_url(sprintf 'http://cpants.cpanauthors.org/dist/%s%s', $self->dist, $self->version eq 'latest' ? '' : '-'.$self->version);
+    $self->link_url(sprintf 'http://cpants.cpanauthors.org/release/%s/%s-%s', $self->author, $self->dist, $self->version);
     $self->image_url($self->custom_image_url);
     $self->image_alt('Distribution kwalitee');
 }
@@ -114,12 +120,12 @@ If used standalone:
 
     use Badge::Depot::Plugin::Kwalitee;
 
-    my $badge = Badge::Depot::Plugin::Kwalitee->new(dist => 'The-Dist', version => '0.1002');
+    my $badge = Badge::Depot::Plugin::Kwalitee->new(dist => 'The-Dist', version => '0.1002', author => 'AUTHORID');
 
     print $badge->to_html;
     # prints:
-    <a href="http://cpants.cpanauthors.org/dist/The-Dist-0.1002">
-        <img src="https://badgedepot.code301.com/badge/kwalitee/The-Dist/0.1002" alt="Distribution kwalitee" />
+    <a href="http://cpants.cpanauthors.org/release/AUTHORID/The-Dist-0.1002">
+        <img src="http://badgedepot.code301.com/badge/kwalitee/AUTHORID/The-Dist/0.1002" alt="Distribution kwalitee" />
     </a>
 
 If used with L<Pod::Weaver::Section::Badges>, in weaver.ini:
@@ -127,6 +133,8 @@ If used with L<Pod::Weaver::Section::Badges>, in weaver.ini:
     [Badges]
     ; other settings
     badge = kwalitee
+    ; set author here
+    -kwalitee_author = AUTHORID
 
 
 =head1 DESCRIPTION
@@ -137,13 +145,17 @@ This class consumes the L<Badge::Depot> role.
 
 =head1 ATTRIBUTES
 
-This badge tries to use distribution meta data to set the attributes. If that is available no attributes need to be set manually. The following checks are made:
+This badge tries to use distribution meta data to set the attributes. If that is available most attributes need not be set manually. The following checks are made:
 
 =for :list
 1. If the badge is used via L<Pod::Weaver::Section::Badges> during a L<Dist::Zilla> build, then C<version> and C<dist> are set to the values in the Dist::Zilla object.
 2. If there is a C<META.json> in the distribution root then that is used to set C<version> and C<dist>.
 
-If neither of those are true, then you should pass C<dist> and C<version> to the constructor.
+If neither of those are true, then you should also pass C<dist> and C<version> to the constructor.
+
+=head2 author
+
+The releaser's CPAN identity. Required.
 
 =head2 dist
 
