@@ -4,7 +4,7 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [API Changes]
 
  [Bug Fixes]
- - Added required 'author' attribute to adapt to cpants changes.
+ - Added required 'author' attribute in order to adapt to cpants changes.
 
  [Documentation]
 
