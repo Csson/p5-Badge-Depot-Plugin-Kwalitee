@@ -4,7 +4,6 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [API Changes]
 
  [Bug Fixes]
- - Added required 'author' attribute in order to adapt to cpants changes.
 
  [Documentation]
 
@@ -13,13 +12,26 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [New Features]
 
  [Other Changes]
- - Default url protocol (temporarily) changed from https to http.
 
  [Requirements]
 
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0102 2016-08-11T23:55:28Z UTC
+ [Bug Fixes]
+ - Added required 'author' attribute in order to adapt to cpants changes.
+
+ [Other Changes]
+ - Default url protocol (temporarily) changed from https to http.
+
+ [Stats & Dependency Changes]
+ - 2 files changed, 23 insertions(+), 11 deletions(-)
+ - (dev req) + Dist::Zilla::Plugin::MetaConfig (any)
+ - (dev req) + Dist::Zilla::Plugin::PromptIfStale (any)
+ - (dev sug) ~ Dist::Iller 0.1407 --> 0.1408
+ - (dev sug) ~ Dist::Iller::Config::Author::CSSON 0.0309 --> 0.0311
 
 0.0101 2016-02-22T14:40:15Z UTC
  [Documentation]
