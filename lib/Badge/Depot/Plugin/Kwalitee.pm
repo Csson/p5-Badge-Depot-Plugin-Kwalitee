@@ -21,7 +21,7 @@ with 'Badge::Depot';
 has author => (
     is => 'ro',
     isa => Str,
-    required => 1,
+    default => '_',
 );
 has dist => (
     is => 'ro',
