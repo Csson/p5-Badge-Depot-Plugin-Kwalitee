@@ -110,7 +110,7 @@
          },
          "suggests" : {
             "Dist::Iller" : "0.1408",
-            "Dist::Iller::Config::Author::CSSON" : "0.0311"
+            "Dist::Iller::Config::Author::CSSON" : "0.0312"
          }
       },
       "runtime" : {
@@ -142,7 +142,7 @@
    "provides" : {
       "Badge::Depot::Plugin::Kwalitee" : {
          "file" : "lib/Badge/Depot/Plugin/Kwalitee.pm",
-         "version" : "0.0102"
+         "version" : "0.0103"
       }
    },
    "release_status" : "stable",
@@ -157,7 +157,7 @@
          "web" : "https://github.com/Csson/p5-Badge-Depot-Plugin-Kwalitee"
       }
    },
-   "version" : "0.0102",
+   "version" : "0.0103",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.020001"
@@ -658,7 +658,7 @@
                   "branch" : null,
                   "changelog" : "Changes",
                   "signed" : 0,
-                  "tag" : "0.0102",
+                  "tag" : "0.0103",
                   "tag_format" : "%v",
                   "tag_message" : "Release %v%n%n%c"
                },

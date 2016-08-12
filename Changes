@@ -8,6 +8,7 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [Documentation]
 
  [Enhancements]
+ - Relaxes 'author' attribute. It is no longer required to create the badge object, but if author is missing the kwalitee will be 'unknown'. This change makes releases that uses this badge but was done before v0.0102 rebuildable.
 
  [New Features]
 
