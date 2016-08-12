@@ -8,7 +8,6 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [Documentation]
 
  [Enhancements]
- - Relaxes 'author' attribute. It is no longer required to create the badge object, but if author is missing the kwalitee will be 'unknown'. This change makes releases that uses this badge but was done before v0.0102 rebuildable.
 
  [New Features]
 
@@ -19,6 +18,17 @@ Revision history for Badge-Depot-Plugin-Kwalitee
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0103 2016-08-12T17:54:02Z UTC
+ [Enhancements]
+ - Relaxes 'author' attribute. It is no longer required to create the badge
+   object, but if author is missing the kwalitee will be 'unknown'. This
+   change makes releases that uses this badge but was done before v0.0102
+   rebuildable.
+
+ [Stats & Dependency Changes]
+ - 1 file changed, 2 insertions(+), 2 deletions(-)
+ - (dev sug) ~ Dist::Iller::Config::Author::CSSON 0.0311 --> 0.0312
 
 0.0102 2016-08-11T23:55:28Z UTC
  [Bug Fixes]
