@@ -6,7 +6,7 @@ package Badge::Depot::Plugin::Kwalitee;
 
 # ABSTRACT: Kwalitee badge for Badge::Depot
 # AUTHORITY
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 
 use Moose;
 use namespace::autoclean;
